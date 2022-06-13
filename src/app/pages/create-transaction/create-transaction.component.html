@@ -1,0 +1,26 @@
+<div class="container">
+  <p>Para transferi</p>
+  <br>
+
+  <div class="form-group">
+    <label>Hangi hesaptan</label>
+    <input type="text" class="form-control" [(ngModel)]="walletKeys[0].publicKey" disabled>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label>Kime</label>
+    <input type="text" class="form-control" [(ngModel)]="newTx.toAddress">
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label>Miktar</label>
+    <input number="text" class="form-control" [(ngModel)]="newTx.amount">
+  </div>
+  <br>
+
+  <button class="btn btn-primary" (click)="createTransaction()">İmzala ve Aktarımı başlat</button>
+
+
+</div>

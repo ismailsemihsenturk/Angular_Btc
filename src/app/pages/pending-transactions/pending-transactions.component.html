@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Beklemede olan aktarımlar</h1>
+
+  <app-transactions-table
+  [transactions]="pendingTransactions"
+  ></app-transactions-table>
+
+  <button class="btn btn-primary" (click)="minePendingTransactions()">Onayla</button>
+
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,22 @@
+<div class="container">
+  <br>
+  <h2>Blockchain</h2>
+  <p>Her kart Blockchain üzerindeki bir block'u temsil eder.</p>
+
+  <app-block-view *ngFor="let block of blocks"
+  [block] ="block"
+  (click) ="showTransactions(block)"
+  ></app-block-view>
+</div>
+
+<br><br>
+
+<div class="container">
+  <h1>Blok içerisindeki aktarımlar</h1>
+  <app-transactions-table
+  [transactions]="selectedBlock.transactions"
+  [timestamp]="selectedBlock.timestamp"
+  ></app-transactions-table>
+</div>
+
+<router-outlet></router-outlet> <!--Herhangi bir comp gösterilecekse mutlaka bunu ekle-->
